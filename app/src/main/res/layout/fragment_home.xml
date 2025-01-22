@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sports"
+        android:hint="Search News"
+        />
+
+<!--    <com.denzcoskun.imageslider.ImageSlider-->
+<!--        android:id="@+id/imageSlider"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="170dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:iss_auto_cycle="true"-->
+<!--        app:iss_period="1000"-->
+<!--        app:iss_delay="1000"-->
+<!--        app:iss_text_align="CENTER"-->
+<!--        app:iss_error_image="@drawable/no_image"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Trending: "
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:background="@drawable/trending_news_red_bg"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/trendingNewsTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:background="@drawable/trending_news_bg"
+            android:text=""
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:scrollHorizontally="true"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    
+    <ImageView
+        android:id="@+id/noDataImage"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/no_data"
+        android:layout_gravity="center"
+        android:contentDescription="No Data"
+        android:visibility="gone"
+        />
+
+</LinearLayout>
